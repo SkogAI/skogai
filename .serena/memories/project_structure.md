@@ -3,15 +3,21 @@
 ## Root Directory
 ```
 /home/skogix/dev/skogai/
-├── CLAUDE.md          # Main Claude AI configuration
+├── CLAUDE.md          # Main Claude AI configuration (refers to .skogai)
 ├── README.md          # Project readme (minimal)
 ├── .envrc             # direnv configuration for environment
 ├── .gitignore         # Git ignore file
 ├── .gitmodules        # Git submodules configuration
 │
-├── .skogai/           # [SUBMODULE] Shared AI agent folder
+├── .skogai/           # [SUBMODULE from github.com/skogai/.skogai]
 │   ├── README.md      # Submodule readme
-│   ├── claude/        # Claude-specific shared data
+│   ├── todo           # Skogix's todo list
+│   ├── docs/          # Documentation
+│   │   ├── user.md    # Skogix's introduction
+│   │   └── claude/    # Claude-specific docs
+│   │       └── examples/
+│   │           └── current-state-answer.md
+│   ├── .gitignore     # Submodule gitignore
 │   └── .git           # Submodule git data
 │
 ├── .serena/           # Serena MCP configuration
@@ -25,12 +31,13 @@
 └── .git/              # Git repository data
 ```
 
-## Key Directories
-- **.skogai/**: Central hub for AI agent coordination (git submodule)
-- **.serena/**: Serena MCP server configuration
-- **.claude/**: Claude's private workspace
+## Key Files in .skogai
+- **todo**: Skogix's task list for the project
+- **docs/user.md**: Introduction from skogix about communication style and preferences
+- **docs/claude/**: Documentation specific to Claude setup
 
-## Important Files
-- **CLAUDE.md**: Primary configuration and instructions for Claude
-- **.envrc**: Environment setup via direnv/skogcli
-- **.gitmodules**: Defines .skogai as submodule from GitHub
+## File References in CLAUDE.md
+- @CLAUDE.md - The main Claude configuration file
+- @.skogai/ - Shared folder for all AI agents
+- @.skogai/docs/user.md - Skogix's introduction
+- @.skogai/todo - Skogix's todo list

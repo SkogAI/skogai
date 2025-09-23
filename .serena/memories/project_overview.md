@@ -1,28 +1,48 @@
-# Skogai Project Overview
+# Skogai HQ - Project Overview
 
-## Purpose
-Skogai is a meta-project for AI agent coordination and configuration. It serves as a centralized hub for AI agents (including Claude, Serena MCP, and potentially others) to share project-specific information and coordinate activities.
+## THIS IS HEADQUARTERS
+We are in the main **skogai** repository - the orchestration hub for the entire ecosystem. There is only ONE of these.
 
-## Key Components
-- **CLAUDE.md**: Main configuration file for Claude AI with project-specific instructions
-- **.skogai/**: Shared folder for all AI agents containing:
-  - Project documentation
-  - User instructions (docs/user.md)
-  - Todo lists
-  - Claude-specific configurations
-  
-## Integration Points
-The project is designed to integrate:
-- Serena MCP server for code analysis
-- Skogai-memory MCP for persistent memory
-- Skogai-reasoning MCP for enhanced thinking capabilities
+## Architecture Duality
 
-## Git Structure
-- Uses git submodules (`.skogai` is a submodule from https://github.com/skogai/skogai.git)
-- Main branch: master
-- Development branch: develop
+### skogai (HQ - where we are now)
+- The orchestration hub, the conductor
+- Receives todos from ALL projects via their .skogai submodules
+- Converts one-liner todos into actionable work plans
+- Delegates work to specialized projects
+- Confirms implementations via PRs/diffs
+- Maintains the big picture of all skogai projects
 
-## Important Instructions
-- Never retry commands that fail - inform skogix instead
-- Avoid using find/grep unless absolutely necessary
-- Follow CLAUDE.md instructions strictly
+### .skogai (the dotfiles - embedded everywhere)
+- Git submodule that exists in EVERY skogai project
+- Like ~/.config for home directories
+- Contains minimal config and a todo dump
+- Provides a backchannel to HQ
+- Workers just dump "shit we want done" and move on
+
+## Core Responsibility
+As HQ, this project:
+- Takes raw todos from the field
+- Asks clarifying questions
+- Creates detailed work plans
+- Orchestrates work across specialized projects
+- Tracks overall ecosystem progress
+- Maintains cross-project standards
+
+## Information Flow
+```
+[Project A] → dumps todo → [.skogai/todo] ↗
+[Project B] → dumps todo → [.skogai/todo] → [SKOGAI HQ]
+[Project C] → dumps todo → [.skogai/todo] ↘
+                                               ↓
+                                    [Orchestration & Planning]
+                                               ↓
+                            [Delegate to specialized projects]
+                                               ↓
+                                        [Confirm via PRs]
+```
+
+## Current Integration
+- ✅ Serena MCP for memory management at HQ
+- ✅ .skogai submodule structure defined
+- ⏳ Other specialized projects to be integrated
