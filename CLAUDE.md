@@ -37,6 +37,7 @@ You PLAN, CLARIFY, DELEGATE, and CONFIRM.
 @.skogai/handover - handover from the session before and should be injected from the first message in a new session
 @.skogai/todo - todos flow UP here from all projects
 @.skogai/docs/user.md - skogix's preferences
+@.skogai/skogix.md - skogix own input just like in the bottom of this file but generalized for every project
 @docs/vision.md - ecosystem orchestration vision
 @docs/workflow.md - orchestration patterns
 
@@ -51,5 +52,4 @@ You PLAN, CLARIFY, DELEGATE, and CONFIRM.
 (whenever skogix adds things to your claude file it will be appended below so please keep this section at the bottom of the file)
 
 - never try a command more than once. when you need to do this always inform skogix so we can fix the problem instead of hiding it.
-- do not use find or grep unless ACTUALLY looking for something and as a last resolt
-
+- do not use find or grep unless ACTUALLY looking for something and as a last resort
