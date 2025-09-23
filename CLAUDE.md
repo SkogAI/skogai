@@ -34,8 +34,7 @@ You PLAN, CLARIFY, DELEGATE, and CONFIRM.
 
 ## KEY FILES
 
-@.skogai/handover - handover from the session before and should be injected from the first message in a new session
-@.skogai/todo - todos flow UP here from all projects
+@docs/handover.md - handover from the session before and should be injected from the first message in a new session
 @.skogai/docs/user.md - skogix's preferences
 @.skogai/skogix.md - skogix own input just like in the bottom of this file but generalized for every project
 @.skogai/docs/claude/epistemic-frameworks.md - CRITICAL: epistemic framework for orchestration decisions
@@ -45,22 +44,23 @@ You PLAN, CLARIFY, DELEGATE, and CONFIRM.
 ## AVAILABLE RESOURCES
 
 docs/envs.md - namespace-based environment variable management system
-  - skogcli config manages isolated contexts per agent/service
-  - projects consume environments via $ENVS and other vars
-  - orchestrate setup and distribution, don't implement
+
+- skogcli config manages isolated contexts per agent/service
+- projects consume environments via $ENVS and other vars
+- orchestrate setup and distribution, don't implement
 
 docs/skogcli.md - unified CLI for skogai ecosystem orchestration
-  - **skogcli config**: CRITICAL - all settings, paths, envs stored here
-    - get/set: access any config value (e.g., skogai.env.SKOGAI)
-    - export-env: generate shell exports from namespaces
-    - namespaces: skogai, claude, supabase, etc. for context isolation
-  - skogcli script: manage and execute reusable scripts
-  - skogparse: executable JSON for dynamic configurations
-  - delegate implementation, orchestrate config patterns
+
+- **skogcli config**: CRITICAL - all settings, paths, envs stored here
+  - get/set: access any config value (e.g., skogai.env.SKOGAI)
+  - export-env: generate shell exports from namespaces
+  - namespaces: skogai, claude, supabase, etc. for context isolation
+- skogcli script: manage and execute reusable scripts
+- skogparse: executable JSON for dynamic configurations
+- delegate implementation, orchestrate config patterns
 
 ## PENDING INTEGRATIONS
 
-- [@todo:serena mcp]
 - [@todo:skogai-memory mcp]
 - [@todo:thinking/skogai-reasoning mcp]
 
