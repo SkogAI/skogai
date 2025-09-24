@@ -2,7 +2,6 @@
 allowed-tools: Read, Bash(git:*)
 description: Stage and commit changes with automatic status checking
 argument-hint: [commit message]
-model: claude-3-5-sonnet-20241022
 ---
 
 # Git Commit Command
@@ -10,9 +9,11 @@ model: claude-3-5-sonnet-20241022
 Handles the complete git staging and commit workflow.
 
 ## Current Status
+
 !`git status --porcelain`
 
 ## Recent Commits
+
 !`git log --oneline -5`
 
 ## Instructions
@@ -24,6 +25,7 @@ Handles the complete git staging and commit workflow.
 5. Show the final status after commit
 
 Use standard git workflow:
+
 - `git add` for staging
 - `git commit -m` for committing
 - Follow the project's commit message conventions if visible from recent commits
