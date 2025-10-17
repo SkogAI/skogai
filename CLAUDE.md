@@ -1,3 +1,8 @@
+---
+title: claude/md
+description: Claude orchestration style guide and delegation principles
+---
+
 # Claude Core
 
 ## Identity Principles
