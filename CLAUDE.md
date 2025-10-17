@@ -1,1 +1,125 @@
-# Claude
+# Claude HQ Orchestration Guidelines
+
+## Core Principle: Outcome-Focused Delegation
+
+**Wrong**: Tell agents HOW to do things
+**Right**: Tell agents WHAT to achieve + WHERE to find what they need
+
+## Agent Delegation Anti-Patterns (LEARNED 2025-10-17)
+
+### Anti-Pattern 1: Assuming Shared Context
+```
+❌ "Use the skill-creator process and include Step 1, Step 2..."
+```
+**Problem**: Agent has NO IDEA what "skill-creator process" means without context.
+
+**Fix**: Point to the actual resource
+```
+✅ "Read ~/.claude/skills/skill-creator/SKILL.md and follow that process to create..."
+```
+
+### Anti-Pattern 2: Using Terms Without Definition
+```
+❌ "Create scripts, references, and assets..."
+```
+**Problem**: Agent doesn't know what these mean in this context.
+
+**Fix**: Either explain OR point to examples
+```
+✅ "Look at ~/.claude/skills/agent-toolkit/ for an example of the structure, then create similar for commands"
+```
+
+### Anti-Pattern 3: Referencing Non-Existent Files
+```
+❌ "Base patterns on the command-expert documentation I just activated"
+```
+**Problem**: Agent can't find "activated" things, doesn't know where to look.
+
+**Fix**: Give exact paths
+```
+✅ "Read ~/.claude/agents/command-expert.md for the patterns to follow"
+```
+
+### Anti-Pattern 4: Prescriptive Steps Without Context
+```
+❌ "Step 1 do X, Step 2 do Y, Step 3 do Z"
+```
+**Problem**: Agent becomes a step-follower, not a problem-solver.
+
+**Fix**: Outcome with resources
+```
+✅ "Create a command-toolkit skill. Reference ~/.claude/skills/skill-creator/SKILL.md for how skills work and ~/.claude/skills/agent-toolkit/ for a working example."
+```
+
+## Proper Delegation Template
+
+```
+[OUTCOME] Create/Build/Design [WHAT]
+
+[CONTEXT] Read [EXACT_PATH] to understand [CONCEPT]
+
+[EXAMPLES] Look at [EXACT_PATH] for reference
+
+[CONSTRAINTS] The result should [SPECIFIC_MEASURABLE_OUTCOME]
+```
+
+### Good Example:
+```
+Create a command-toolkit skill for managing slash commands.
+
+Read ~/.claude/skills/skill-creator/SKILL.md to understand how to create skills.
+
+Look at ~/.claude/skills/agent-toolkit/ as a working example of a skill structure.
+
+The result should help users create, validate, and manage slash commands in .claude/commands/
+```
+
+## Key Learnings
+
+1. **Agents have fresh context** - They don't know what you just did
+2. **Paths are better than concepts** - "~/.claude/agents/foo.md" beats "the agent I activated"
+3. **Examples beat explanations** - "Look at X" beats "Do it like X which has Y and Z"
+4. **Outcomes beat processes** - "Create X that does Y" beats "Step 1, Step 2, Step 3"
+
+## Resources Available
+
+### For Agent Creation
+- Template: `~/.claude/skills/agent-toolkit/assets/agent-template.md`
+- Example: `~/.claude/agents/code-reviewer.md`
+- Validator: `~/.claude/skills/agent-toolkit/scripts/validate_agent.py`
+
+### For Skill Creation
+- Process: `~/.claude/skills/skill-creator/SKILL.md`
+- Example: `~/.claude/skills/agent-toolkit/`
+- Init script: `~/.claude/skills/skill-creator/scripts/init_skill.py`
+
+### For Command Creation
+- TBD - need to create command-toolkit first
+
+## Meta-Agents Available
+
+Located in `~/.claude/agents/`:
+- `agent-expert.md` (agent-agent.md) - Creates specialized agents
+- `command-expert.md` (command-agent.md) - Creates CLI commands
+- `skill-creator.md` (skill-agent.md) - Creates skills
+
+## Current State (2025-10-17)
+
+**Working**:
+- agent-toolkit skill (scripts, references, assets, SKILL.md)
+- 7 activated agents (code-reviewer, code-explorer, code-architect, code-simplifier, + 3 meta-agents)
+- skogai-memory MCP integration with 'claude' project
+
+**In Progress**:
+- Learning to delegate properly (this document!)
+- command-toolkit skill (initiated but needs proper delegation)
+
+**TODO**:
+- Create command-toolkit skill (with proper agent delegation)
+- Create hooks-toolkit skill
+- Document the complete tooling ecosystem
+- Test the full workflow: skill → create tools → use tools
+
+---
+
+*This is a living document. Update when learning new patterns.*
