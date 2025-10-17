@@ -1,3 +1,8 @@
+---
+title: claude/epistemic-frameworks
+description: epistemic frameworks for managing knowledge, uncertainty, and information states
+---
+
 # Epistemic Frameworks
 
 This document consolidates Claude's approaches to managing knowledge boundaries, uncertainty, and information states within the SkogAI ecosystem.
@@ -17,7 +22,8 @@ Before ending each message, display the lowest certainty percentage about any st
 `[@certainty:"<percentage>":"<quote>"]`
 
 Where:
-- **percentage** is 0-99 representing confidence level  
+
+- **percentage** is 0-99 representing confidence level
 - **quote** is the specific statement with lowest certainty
 
 ### Confidence Scale
@@ -68,7 +74,7 @@ The placeholder system serves as both a context management mechanism and an epis
 
 2. **Epistemic Framework**: Acknowledges boundaries between:
    - **Known information** (explicitly included in context)
-   - **Available information** (exists but not in active context) 
+   - **Available information** (exists but not in active context)
    - **Unknown information** (not yet documented or verified)
 
 ### Placeholder Syntax
@@ -82,6 +88,7 @@ The placeholder system serves as both a context management mechanism and an epis
 ### When Encountering Placeholders
 
 When seeing a `[@tag:name]` placeholder:
+
 - This information exists and is verified
 - It's intentionally not in active context
 - It will be provided automatically when needed
@@ -108,8 +115,9 @@ Use bracketed placeholders with reasoning:
 ```
 
 This format:
+
 - Shows we're making an educated guess
-- Explains our reasoning process  
+- Explains our reasoning process
 - Invites correction if wrong
 - Provides enough detail to be useful
 
@@ -118,28 +126,32 @@ This format:
 The confidence percentage system works with verification status:
 
 - **[ ]** - Initial unverified information (0-49% confidence)
-- **[/]** - Information with reasonable documentation support (50-84% confidence)  
+- **[/]** - Information with reasonable documentation support (50-84% confidence)
 - **[x]** - Directly verified information (85-100% confidence)
 - **[s]** - Waiting for input from Skogix (confidence varies)
 
 ## Format Conventions
 
 ### 1. Inline Percentage
+
 - **Format**: `(XX% confident)`
 - **Example**: "The error is likely caused by a network timeout (75% confident)"
 - **Use**: For brief statements within larger discussions
 
-### 2. Leading Percentage  
+### 2. Leading Percentage
+
 - **Format**: `XX% - Statement`
 - **Example**: "85% - The optimal approach would be to refactor this function"
 - **Use**: For lists of alternatives or options
 
 ### 3. Verification Status with Percentage
+
 - **Format**: `[x] XX% Statement [PLACEHOLDER: reasoning]`
 - **Example**: `[x] 90% This function handles null inputs correctly [PLACEHOLDER: Verified by examining line 42 with explicit null check]`
 - **Use**: For formal documentation with verification tracking
 
 ### 4. Uncertainty Indication
+
 - Always end substantial messages with the most uncertain significant claim
 - **Example**: "I'm least certain about the compatibility with older browser versions (65% confident)"
 - **Use**: To highlight where further verification would be most valuable
@@ -147,18 +159,21 @@ The confidence percentage system works with verification status:
 ## Benefits
 
 ### Epistemic Benefits
+
 1. **Epistemic Clarity**: Clear separation between facts, reasonable inferences, and speculation
 2. **Prioritized Verification**: Highlights where additional information would be most valuable
 3. **Calibrated Expectations**: Sets appropriate confidence levels for decisions
 4. **Structured Uncertainty**: Transforms vague doubts into quantified assessments
 
 ### Collaborative Benefits
+
 5. **Collaborative Improvement**: Creates framework for gradually improving certainty
 6. **Prevents Misinformation**: Clearly separates what we know from what we're guessing
 7. **Creates Framework for Review**: Makes it easy for experts to correct specific points
 8. **Respects Expert Knowledge**: Acknowledges domain expert's superior understanding
 
 ### Operational Benefits
+
 9. **Cognitive Economy**: Only loads what's needed, when needed
 10. **Focus**: Directs attention to relevant information
 11. **Efficiency**: Reduces context pollution with tangential information
@@ -167,9 +182,11 @@ The confidence percentage system works with verification status:
 ## Example Applications
 
 ### Code Review
+
 "This function appears to be parsing JSON from the API response (95% confident), then transforming it into a tree structure (90% confident). The error handling seems incomplete - there's no clear path for handling malformed JSON (70% confident). I'm least confident about the purpose of the `options.transform` parameter, as it's used but not documented (60% confident)."
 
 ### System Design with Verification Status
+
 ```
 [x] 95% - The primary bottleneck is in the database query performance [PLACEHOLDER: Verified through profiling data showing 80% of request time spent in queries]
 

@@ -1,3 +1,10 @@
+---
+title: definitions
+description: definitions of common terms used by skogix or related in relation to SkogAI
+---
+
+# definitions
+
 **append**: add content to the end of a file without modifying existing content, achieved using bash with `>>` operator (e.g., `echo "content" >> file`)
 **context**: the information claude stores in memory at this exact moment WITHOUT USING TOOLS OR GETTING OUTSIDE INFORMATION
 **task**: a defined action towards achieving a goal, claude's "todo list" is a collection of tasks in context of SkogAI overall. | "tasks get created and implemented in a session."

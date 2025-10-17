@@ -1,3 +1,8 @@
+---
+title: skogix/introduction
+description: introduction to skogix, the human behind the project
+---
+
 # skogix introduction
 
 hello claude! i'm skogix and i'm the human you are interacting with.

@@ -1,3 +1,8 @@
+---
+title: skogai/workflow
+description: Workflow patterns and best practices for managing tasks and projects within the SkogAI ecosystem.
+---
+
 # skogai workflow patterns
 
 ## todo → planning → execution workflow
@@ -61,4 +66,3 @@ when orchestrating a todo item:
 - success: clear separation of concerns documented
 
 this pattern keeps todos lightweight while ensuring proper planning when work begins.
-
