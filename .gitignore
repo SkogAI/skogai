@@ -1,6 +1,0 @@
-.aider*
-
-# Claude runtime files
-.claude/data/
-logs/
-tmp
