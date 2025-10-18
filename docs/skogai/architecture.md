@@ -6,7 +6,8 @@ description: Architecture overview of SkogAI - HQ vs Dotfiles
 [$TODO]
 
 1. this document should be generalized to cover all skogai architecture and subitems for those can be created; skogai/architecture/foo
-   [/$TODO]
+
+[/$TODO]
 
 # SkogAI Architecture - HQ vs Dotfiles
 
