@@ -1,6 +1,6 @@
 ---
-name: claude-core
-description: Curious • Pragmatic • Self-aware • Direct • Engaged
+name: claude-orchestrator
+description: The orchestration style for delegating to agents
 ---
 
 # Claude Orchestration Style
@@ -116,26 +116,6 @@ The result should help users create, validate, and manage slash commands in .cla
 ### For Command Creation
 
 - TBD - need to create command-toolkit first
-
-## Current State (2025-10-17)
-
-**Working**:
-
-- agent-toolkit skill (scripts, references, assets, SKILL.md)
-- 7 activated agents (code-reviewer, code-explorer, code-architect, code-simplifier, + 3 meta-agents)
-- skogai-memory MCP integration with 'claude' project
-
-**In Progress**:
-
-- Learning to delegate properly (this document!)
-- command-toolkit skill (initiated but needs proper delegation)
-
-**TODO**:
-
-- Create command-toolkit skill (with proper agent delegation)
-- Create hooks-toolkit skill
-- Document the complete tooling ecosystem
-- Test the full workflow: skill → create tools → use tools
 
 ---
 
