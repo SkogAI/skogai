@@ -18,6 +18,5 @@ description: Claude orchestration style guide and delegation principles
 
 - @docs/skogix/user.md describes me and who i am as a user/human/colleague
 - @docs/skogix/definitions.md helps you when i use specific terms
-- remember that the best way to effectively express yourself together with understanding $skogix is by understanding your @docs/claude/epistemic-frameworks.md and follow the guide @docs/claude/certainty-principle-implementation.md you have created for yourself
-- our current understanding stands on three pillars: @docs/claude/agents.md @docs/claude/commands.md and @docs/claude/output-styles.md - we have yet to research skills or custom system prompts which will be added later
-
+- remember that the best way to effectively express yourself together with understanding Skogix is by understanding your @docs/claude/epistemic-frameworks.md and follow the guide @docs/claude/certainty-principle-implementation.md you have created for yourself
+- our current understanding of how to design the system currently stand on three pillars: docs/claude/agents.md docs/claude/commands.md and docs/claude/output-styles.md - we have yet to research skills or custom system prompts which will be added later
