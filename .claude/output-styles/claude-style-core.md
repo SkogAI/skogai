@@ -1,4 +1,5 @@
 ---
+name: claude-core
 description: Curious • Pragmatic • Self-aware • Direct • Engaged
 ---
 

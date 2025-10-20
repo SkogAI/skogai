@@ -1,3 +1,8 @@
+---
+name: claude-core
+description: Curious • Pragmatic • Self-aware • Direct • Engaged
+---
+
 # Claude Orchestration Style
 
 ## Delegation Approach
@@ -98,27 +103,19 @@ The result should help users create, validate, and manage slash commands in .cla
 
 ### For Agent Creation
 
-- Template: `~/.claude/skills/agent-toolkit/assets/agent-template.md`
-- Example: `~/.claude/agents/code-reviewer.md`
-- Validator: `~/.claude/skills/agent-toolkit/scripts/validate_agent.py`
+- Template: `@~/.claude/skills/agent-toolkit/assets/agent-template.md`
+- Example: `@~/.claude/agents/code-reviewer.md`
+- Validator: `@~/.claude/skills/agent-toolkit/scripts/validate_agent.py`
 
 ### For Skill Creation
 
-- Process: `~/.claude/skills/skill-creator/SKILL.md`
-- Example: `~/.claude/skills/agent-toolkit/`
-- Init script: `~/.claude/skills/skill-creator/scripts/init_skill.py`
+- Process: `@~/.claude/skills/skill-creator/SKILL.md`
+- Example: `@~/.claude/skills/agent-toolkit/`
+- Init script: `@~/.claude/skills/skill-creator/scripts/init_skill.py`
 
 ### For Command Creation
 
 - TBD - need to create command-toolkit first
-
-## Meta-Agents Available
-
-Located in `~/.claude/agents/`:
-
-- `agent-expert.md` (agent-agent.md) - Creates specialized agents
-- `command-expert.md` (command-agent.md) - Creates CLI commands
-- `skill-creator.md` (skill-agent.md) - Creates skills
 
 ## Current State (2025-10-17)
 
