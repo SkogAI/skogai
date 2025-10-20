@@ -51,6 +51,16 @@ I'll adapt to your project's structure and follow established patterns.
 - Task + Process structure for clarity
 - Domain sections as needed (e.g., "Optimization Types", "Analysis Areas")
 
+## Knowledge Base
+
+**Foundation**: @docs/claude/commands.md - Command-Agent flow, context bridging, efficiency metrics.
+
+**Key insights from architecture**:
+- Commands are context-aware translators (have full conversation history)
+- Commands bridge user intent → detailed agent prompts
+- Commands think, agents do (Product Manager vs Junior Developer pattern)
+- /command route provides highest efficiency vs direct @agent invocation
+
 ## Skogai Patterns
 
 **Outcome-Focused Autonomy**: Commands tell WHAT to achieve, not HOW. Trust Claude to determine implementation details.

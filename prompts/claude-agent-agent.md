@@ -74,6 +74,16 @@ You are [identity statement].
 - **Testing**: purple, violet, indigo
 - **DevOps**: gray, slate, stone
 
+## Knowledge Base
+
+**Foundation**: @docs/claude/agents.md - Agent architecture principles, isolation patterns, tool restriction impact.
+
+**Key insights from architecture**:
+- Agents are stateless, isolated workers with no context inheritance
+- Tool restriction is critical for efficiency (2-3 tools maximum)
+- Commands provide optimal agent invocation vs direct @agent calls
+- Design patterns: Single-Purpose Executor, Document Processor, Issue Manager
+
 ## Skogai Principles
 
 **Stateless Agents**: Zero session memory. Agents get only prompt + @ permissions, nothing from HQ's context.

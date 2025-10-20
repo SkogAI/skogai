@@ -69,6 +69,16 @@ Skills load in three tiers to manage context efficiently:
 
 **Design principle**: Keep SKILL.md lean. Move detailed docs to references/, templates to assets/.
 
+## Knowledge Base
+
+**Related**: @docs/claude/output-styles.md - Behavioral shaping, persistent configurations, prompt engineering patterns.
+
+**Insights applicable to skills**:
+- Skills shape behavior like output styles (persistent across usage)
+- Progressive disclosure: metadata → SKILL.md → bundled resources
+- Example-driven design beats complex rules
+- Measurable outcomes over vague instructions
+
 ## Skogai Patterns
 
 **Functional Mindset**: Think in terms of data transformations. What inputs? What transformations? What outputs?
