@@ -1,3 +1,8 @@
+---
+title: skogai/environment-variables
+description: Comprehensive overview of SkogAI's environment variable management system using namespaces and JSON configuration.
+---
+
 # SkogAI Environment Variable Management
 
 SkogAI uses a sophisticated namespace-based system for managing environment variables that bridges JSON configuration storage with shell environment variables.
@@ -5,6 +10,7 @@ SkogAI uses a sophisticated namespace-based system for managing environment vari
 ## Core Architecture
 
 ### Storage: `config/config.json`
+
 Environment variables are stored in JSON format, organized by namespace:
 
 ```json
@@ -27,6 +33,7 @@ Environment variables are stored in JSON format, organized by namespace:
 ```
 
 ### Loading: `skogcli config export-env`
+
 The bridge between JSON storage and shell environment is `skogcli config export-env`:
 
 ```bash
@@ -42,6 +49,7 @@ eval "$(skogcli config export-env --namespace skogai)"
 ## Namespace Design
 
 ### Agent-Specific Contexts
+
 Different agents and services get their own environment contexts:
 
 - **`skogai`** - Core system variables, paths, and general settings
@@ -52,7 +60,9 @@ Different agents and services get their own environment contexts:
 - **`cloudflare`** - API keys and zone configurations
 
 ### Context Isolation
+
 This design allows:
+
 - **Isolated environments** per agent/service
 - **Dynamic loading** of relevant variables only
 - **Security separation** of credentials by context
@@ -61,6 +71,7 @@ This design allows:
 ## Usage Patterns
 
 ### Shell Startup
+
 Load core system variables in your shell startup files:
 
 ```bash
@@ -70,6 +81,7 @@ eval "$(skogcli config export-env --namespace skogai)"
 ```
 
 ### Dynamic Context Switching
+
 Load agent-specific environments as needed:
 
 ```bash
@@ -77,12 +89,13 @@ Load agent-specific environments as needed:
 eval "$(skogcli config export-env --namespace claude)"
 echo $PAGER  # Now "bat" instead of "cat"
 
-# When doing GitHub operations  
+# When doing GitHub operations
 eval "$(skogcli config export-env --namespace github)"
 # Now $GITHUB_TOKEN is available
 ```
 
 ### Multiple Context Loading
+
 Load multiple namespaces for complex operations:
 
 ```bash
@@ -94,6 +107,7 @@ eval "$(skogcli config export-env --namespace claude)"
 ## Variable Expansion
 
 The system supports variable expansion within config.json:
+
 ```json
 {
   "skogai": {
@@ -110,6 +124,7 @@ When exported, `$SKOGAI` is expanded to `/home/skogix/skogai`.
 ## Management Commands
 
 ### View Configuration
+
 ```bash
 # View a specific namespace
 skogcli config get claude.env
@@ -119,6 +134,7 @@ skogcli config get
 ```
 
 ### Export Variables
+
 ```bash
 # Generate export statements (don't evaluate)
 skogcli config export-env --namespace skogai
@@ -128,6 +144,7 @@ eval "$(skogcli config export-env --namespace skogai)"
 ```
 
 ### Current Environment
+
 ```bash
 # Check what's currently loaded
 env | grep SKOGAI
@@ -144,6 +161,7 @@ env | grep CLAUDE
 ## Integration with Tools
 
 ### Claude Code
+
 Claude Code tools (like Bash) inherit whatever environment variables are loaded in the shell session. To ensure Claude gets its preferred settings:
 
 ```bash
@@ -151,9 +169,11 @@ eval "$(skogcli config export-env --namespace claude)"
 ```
 
 ### Argc Commands
+
 The argc CLI system can bind to specific environments through the configuration system.
 
 ### Agent Workflows
+
 Different AI agents automatically get their appropriate environment context loaded when invoked through the SkogAI system.
 
 ## Best Practices

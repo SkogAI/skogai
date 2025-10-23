@@ -1,3 +1,6 @@
 [submodule ".skogai"]
 	path = .skogai
 	url = https://github.com/skogai/.skogai
+[submodule "smolagents"]
+	path = smolagents
+	url = https://github.com/huggingface/smolagents.git
