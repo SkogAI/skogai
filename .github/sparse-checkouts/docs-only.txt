@@ -1,5 +1,0 @@
-*.md
-/skogai/
-/Argcfile.sh
-/scripts/
-/tests/
