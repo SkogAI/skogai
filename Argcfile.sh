@@ -222,12 +222,61 @@ issue::view() {
 # }}} gh issue view
 # }} gh issue
 
+# {{ worktree
+# @cmd Manage worktrees
+worktree() {
+  :
+}
+
+# {{{ worktree list
+# @cmd List all active worktrees
+worktree::list() {
+  _list_active_worktrees
+}
+# }}} worktree list
+
+# {{{ worktree create
+# @cmd Create a worktree for a branch
+# @flag --help    Show help for command
+# @arg branch![`_list_branches`]
+worktree::create() {
+  _create_worktree "$argc_branch"
+}
+# }}} worktree create
+
+# {{{ worktree update
+# @cmd Create worktrees for all branches
+worktree::update() {
+  _list_branches | while read -r branch; do
+    _create_worktree "$branch"
+  done
+}
+# }}} worktree update
+# }} worktree
+
 _available_issues() {
   gh issue list --json number --jq '.[].number'
 }
 
 _available_branches() {
   git branch
+}
+
+_list_branches() {
+  git branch --list --format='%(refname:short)' | cat
+}
+
+_list_worktrees() {
+  ls -1 "$WORKTREE_BASE"
+}
+
+_list_active_worktrees() {
+  git worktree list --porcelain | grep '^worktree' | awk '{print $2}' | grep "$WORKTREE_BASE" | awk -F/ '{print $NF}'
+}
+
+_create_worktree() {
+  local branch_name="$1"
+  git worktree add --checkout "$WORKTREE_BASE/$branch_name" --guess-remote --force
 }
 
 _choice_issue_number() {
