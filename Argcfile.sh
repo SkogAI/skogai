@@ -229,9 +229,9 @@ worktree() {
 }
 
 # {{{ worktree list
-# @cmd List all active worktrees
+# @cmd List all worktrees
 worktree::list() {
-  _list_active_worktrees
+  _list_worktrees
 }
 # }}} worktree list
 
@@ -268,10 +268,6 @@ _list_branches() {
 
 _list_worktrees() {
   ls -1 "$WORKTREE_BASE"
-}
-
-_list_active_worktrees() {
-  git worktree list --porcelain | grep '^worktree' | awk '{print $2}' | grep "$WORKTREE_BASE" | awk -F/ '{print $NF}'
 }
 
 _create_worktree() {
