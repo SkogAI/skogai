@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "skogix-hello-world",
-      "source": ".",
+      "source": "./",
       "description": "comprehensive hello world plugin demonstrating all component types"
     }
   ]
