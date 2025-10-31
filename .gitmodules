@@ -1,0 +1,7 @@
+[submodule "dev/skogai-dotfiles"]
+	path = dev/skogai-dotfiles
+	url = git@github.com:skogai/.dotfiles.git
+[submodule "dev/skogix-dotfiles"]
+	path = dev/skogix-dotfiles
+	url = git@github.com:skogix/.dotfiles.git
+
