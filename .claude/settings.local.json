@@ -1,7 +1,16 @@
 {
   "permissions": {
+    "allow": [
+      "Bash(skogcli config set:*)"
+    ],
     "additionalDirectories": [
       "/home/skogix/new-skogai"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "tools",
+    "loremaster",
+    "librarian",
+    "skogai-memory"
+  ]
 }
