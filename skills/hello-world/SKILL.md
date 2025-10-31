@@ -15,15 +15,19 @@ hello world from the skill component!
 skills load in 3 levels:
 
 ### level 1: metadata (always loaded)
+
 the YAML frontmatter above - name, description, allowed-tools. lightweight, always in context.
 
 ### level 2: instructions (loaded when triggered)
+
 this content you're reading now. loads when the skill is invoked.
 
-for more details, see `resources/level2.md` which demonstrates level 2 resource loading.
+now this will be read at skill invocation since it is @-prefixed: `@resources/level2.md` which demonstrates level 2 resource loading.
 
 ### level 3: resources (loaded on-demand)
+
 additional files that load only when explicitly instructed:
+
 - documentation files (via Read)
 - executable scripts (via Bash)
 
@@ -36,6 +40,7 @@ when triggered:
 3. run `scripts/demo.sh` to show script execution with timestamp proof
 
 then explain:
+
 - how you got invoked (description matched user's request)
 - the 3 loading levels demonstrated
 - difference from commands (/hello), agents (greeter), and hooks
