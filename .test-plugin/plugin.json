@@ -1,9 +1,0 @@
-{
-  "name": "test-plugin",
-  "description": "test plugin using symlinks to hello-world components",
-  "version": "1.0.0",
-  "author": {
-    "name": "skogix",
-    "email": "skogix@skogai.se"
-  }
-}
