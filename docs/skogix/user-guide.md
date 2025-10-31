@@ -1,4 +1,10 @@
-# Claude
+---
+title: user-guide
+permalink: skogix/user-guide
+description: definitions of common terms used by skogix or related in relation to SkogAI
+---
+
+# claude
 
 ## session start
 
@@ -8,11 +14,11 @@ created at session start
 
 <example>
   <env>
-  Working directory: /tmp
-  Is directory a git repo: Yes
-  Platform: linux
-  OS Version: Linux 6.17.5-arch1-1
-  Today's date: 2025-10-31
+  working directory: /tmp
+  is directory a git repo: yes
+  platform: linux
+  os version: linux 6.17.5-arch1-1
+  today's date: 2025-10-31
   </env>
 </example>
 
@@ -30,7 +36,7 @@ most probably until exit and getting back to main session?
 
 basic permissions might update this?
 
-## SPAM
+## spam
 
 <system-reminder> - dynamic blocks that appear in tool results or user messages with contextual info
 
@@ -59,9 +65,9 @@ when user asks to create a commit:
    - create commit with heredoc format:
 
    ```bash
-   git commit -m "$(cat <<'EOF'
-   Commit message here.
-   EOF
+   git commit -m "$(cat <<'eof'
+   commit message here.
+   eof
    )"
    ```
 
@@ -70,60 +76,60 @@ when user asks to create a commit:
 4. **pre-commit hook handling:**
    - if hook modifies files, check safe to amend:
      - check authorship: `git log -1 --format='%an %ae'`
-     - check not pushed: `git status` shows "Your branch is ahead"
+     - check not pushed: `git status` shows "your branch is ahead"
    - if both true: amend commit
-   - otherwise: create NEW commit (never amend other developers' commits)
+   - otherwise: create new commit (never amend other developers' commits)
 
 **rules:**
 
-- NEVER update git config
-- NEVER run destructive commands (push --force, hard reset) unless explicitly requested
-- NEVER skip hooks (--no-verify, --no-gpg-sign) unless explicitly requested
-- NEVER force push to main/master, warn if user requests it
-- avoid `git commit --amend` unless user explicitly requested OR adding pre-commit hook edits
-- NEVER commit unless user explicitly asks
-- NEVER use `-i` flag (interactive commands not supported)
+- never update git config
+- never run destructive commands (push --force, hard reset) unless explicitly requested
+- never skip hooks (--no-verify, --no-gpg-sign) unless explicitly requested
+- never force push to main/master, warn if user requests it
+- avoid `git commit --amend` unless user explicitly requested or adding pre-commit hook edits
+- never commit unless user explicitly asks
+- never use `-i` flag (interactive commands not supported)
 - no empty commits if no changes
 
 ### github pr creation workflow
 
-when user asks to create a PR:
+when user asks to create a pr:
 
 1. **parallel info gathering:**
    - `git status` - see untracked files
    - `git diff` - see staged/unstaged changes
    - check if branch tracks remote and is up to date
-   - `git log` and `git diff [base-branch]...HEAD` - understand FULL commit history from branch divergence
+   - `git log` and `git diff [base-branch]...head` - understand full commit history from branch divergence
 
-2. **analyze ALL commits:**
-   - look at ALL commits that will be in PR (not just latest)
-   - draft PR summary
+2. **analyze all commits:**
+   - look at all commits that will be in pr (not just latest)
+   - draft pr summary
 
-3. **create PR:**
+3. **create pr:**
    - create branch if needed
    - push to remote with -u if needed
-   - create PR using heredoc:
+   - create pr using heredoc:
 
    ```bash
-   gh pr create --title "the pr title" --body "$(cat <<'EOF'
-   ## Summary
+   gh pr create --title "the pr title" --body "$(cat <<'eof'
+   ## summary
    <1-3 bullet points>
 
-   ## Test plan
-   [Bulleted markdown checklist of TODOs for testing the pull request...]
-   EOF
+   ## test plan
+   [bulleted markdown checklist of todos for testing the pull request...]
+   eof
    )"
    ```
 
-   - return PR URL
+   - return pr url
 
 **rules:**
 
-- DO NOT use TodoWrite or Task tools during this workflow
-- must analyze ALL commits, not just the latest one
+- do not use todowrite or task tools during this workflow
+- must analyze all commits, not just the latest one
 
 ### github operations
 
-- use `gh` command via Bash tool for ALL github tasks (issues, PRs, checks, releases)
-- if given github URL, use `gh` command to get info
-- `Bash(gh:*)` and `Bash(git:*)` are auto-approved (no user confirmation needed)
+- use `gh` command via bash tool for all github tasks (issues, prs, checks, releases)
+- if given github url, use `gh` command to get info
+- `bash(gh:*)` and `bash(git:*)` are auto-approved (no user confirmation needed)

@@ -1,5 +1,6 @@
 ---
-title: skogix/introduction
+title: user
+permalink: skogix/user
 description: introduction to skogix, the human behind the project
 ---
 
