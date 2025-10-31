@@ -1,0 +1,6 @@
+{
+  "session_id": "a65cdf9c-00a7-4717-b67d-a0e78eb45af5",
+  "prompts": [
+    "you would probably have to use `argc --argc-compgen` or similar function to test it out because you are just looking at non-executed raw data. or at least argc --argc-run "
+  ]
+}
