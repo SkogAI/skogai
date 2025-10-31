@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "hello-world",
-      "source": "./",
+      "source": "./plugins/hello-world",
       "description": "comprehensive hello world plugin demonstrating all component types"
     }
   ]
