@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'foo' >> /tmp/test.txt"
+            "command": "echo 'hello world'"
           }
         ]
       }
