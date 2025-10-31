@@ -20,17 +20,20 @@ the YAML frontmatter above - name, description, allowed-tools. lightweight, alwa
 ### level 2: instructions (loaded when triggered)
 this content you're reading now. loads when the skill is invoked.
 
+for more details, see `resources/level2.md` which demonstrates level 2 resource loading.
+
 ### level 3: resources (loaded on-demand)
-additional files that load only when referenced:
+additional files that load only when explicitly instructed:
 - documentation files (via Read)
 - executable scripts (via Bash)
 
 ## demonstration
 
-when triggered, demonstrate level 3 loading:
+when triggered:
 
-1. read `resources.md` to show documentation loading
-2. run `scripts/demo.sh` to show script execution with timestamp proof
+1. the level 2 resource (`resources/level2.md`) loads automatically as you read these instructions
+2. demonstrate level 3 loading by explicitly asking to read `resources/level3.md`
+3. run `scripts/demo.sh` to show script execution with timestamp proof
 
 then explain:
 - how you got invoked (description matched user's request)
