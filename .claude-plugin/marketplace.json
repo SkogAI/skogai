@@ -9,6 +9,11 @@
       "name": "hello-world",
       "source": "./plugins/hello-world",
       "description": "comprehensive hello world plugin demonstrating all component types"
+    },
+    {
+      "name": "test-plugin",
+      "source": "./.test-plugin",
+      "description": "test plugin using custom paths to hello-world components"
     }
   ]
 }
