@@ -1,0 +1,14 @@
+{
+  "name": "skogix-local",
+  "description": "local development marketplace for skogix plugins",
+  "owner": {
+    "name": "skogix"
+  },
+  "plugins": [
+    {
+      "name": "skogix-hello-world",
+      "source": ".",
+      "description": "comprehensive hello world plugin demonstrating all component types"
+    }
+  ]
+}

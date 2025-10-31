@@ -1,0 +1,6 @@
+{
+  "user-prompt-submit": {
+    "description": "hello world hook that triggers on user prompt submission",
+    "command": "echo '# hello world from the hook component!\n\nthis demonstrates:\n- hooks trigger on events (user-prompt-submit, file-write, etc)\n- hooks run shell commands\n- hooks.json lives in hooks/ directory\n- hook output appears in the conversation\n\nevent: user-prompt-submit\nuser said: \"$PROMPT\"' | head -5"
+  }
+}
