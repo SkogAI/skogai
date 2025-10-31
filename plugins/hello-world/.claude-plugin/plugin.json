@@ -1,9 +1,0 @@
-{
-  "name": "hello-world",
-  "description": "A comprehensive hello world plugin demonstrating all Claude plugin component types: commands, agents, skills, and hooks",
-  "version": "1.0.0",
-  "author": {
-    "name": "skogix",
-    "email": "skogix@skogai.se"
-  }
-}
