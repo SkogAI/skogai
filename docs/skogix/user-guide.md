@@ -1,6 +1,6 @@
-# 🚀 The SkogAI Team - User Guide
+# 🚀 The Agentic Startup - User Guide
 
-Welcome to SkogAI! This guide will help you understand how to work with this structured approach to building features and solving problems.
+Welcome to The Agentic Startup framework! This guide will help you understand how to work with this structured approach to building features and solving problems.
 
 ## Quick Start
 
@@ -19,21 +19,18 @@ The framework provides four main commands that follow a natural workflow:
 **Purpose**: Discover and document what exists in your codebase or domain.
 
 **When to use**:
-
 - Exploring unfamiliar territory
 - Understanding existing systems before making changes
 - Need to gather context about business rules, technical patterns, or integrations
 - Starting a new project area
 
 **What it does**:
-
 - Iteratively explores the specified area
 - Documents business rules, technical patterns, and system interfaces
 - Creates organized documentation for future reference
 - Identifies integration points and dependencies
 
 **Examples**:
-
 ```bash
 /start:analyze business      # Discover business rules and domain logic
 /start:analyze technical     # Explore technical architecture and patterns
@@ -50,14 +47,12 @@ The framework provides four main commands that follow a natural workflow:
 **Purpose**: Transform ideas into comprehensive specifications.
 
 **When to use**:
-
 - You have a feature request or requirement
 - Need to plan before implementing
 - Want clear acceptance criteria and test strategies
 - Building something new or making significant changes
 
 **What it does**:
-
 - Creates detailed specification documents
 - Defines acceptance criteria
 - Plans implementation approach
@@ -65,7 +60,6 @@ The framework provides four main commands that follow a natural workflow:
 - Identifies dependencies and risks
 
 **Examples**:
-
 ```bash
 /start:specify user authentication system
 /start:specify payment processing integration
@@ -74,7 +68,6 @@ The framework provides four main commands that follow a natural workflow:
 ```
 
 **Output**: A specification document (e.g., `S001-user-authentication.md`) with:
-
 - Feature overview and objectives
 - Acceptance criteria
 - Implementation plan
@@ -88,13 +81,11 @@ The framework provides four main commands that follow a natural workflow:
 **Purpose**: Execute the implementation plan from a specification.
 
 **When to use**:
-
 - You have a spec ready to build
 - Want coordinated, parallel execution by specialists
 - Ready to write code based on your plan
 
 **What it does**:
-
 - Reads the specification document
 - Coordinates multiple specialist agents in parallel
 - Implements the planned solution
@@ -102,7 +93,6 @@ The framework provides four main commands that follow a natural workflow:
 - Delivers working code
 
 **Examples**:
-
 ```bash
 /start:implement S001                    # By spec number
 /start:implement S001-user-authentication # By full spec name
@@ -118,14 +108,12 @@ The framework provides four main commands that follow a natural workflow:
 **Purpose**: Improve code quality without changing behavior.
 
 **When to use**:
-
 - Code works but is messy or hard to maintain
 - Need better organization or patterns
 - Want to reduce technical debt
 - Preparing for future feature additions
 
 **What it does**:
-
 - Analyzes existing code
 - Applies better patterns and practices
 - Improves readability and maintainability
@@ -133,7 +121,6 @@ The framework provides four main commands that follow a natural workflow:
 - Includes comprehensive testing
 
 **Examples**:
-
 ```bash
 /start:refactor authentication module for better testability
 /start:refactor API handlers to use consistent error handling
@@ -187,19 +174,16 @@ The framework provides four main commands that follow a natural workflow:
 ## The Philosophy
 
 ### Speed + Quality
-
 - We execute fast BUT never compromise on quality
 - Parallel execution for maximum velocity
 - Proper planning prevents rework
 
 ### Documentation
-
 - Document what matters
 - Capture reusable patterns
 - Build institutional knowledge
 
 ### Specialist Coordination
-
 - Leverage experts for their domain
 - Run parallel when possible
 - Synthesize results into unified solutions
@@ -209,23 +193,18 @@ The framework provides four main commands that follow a natural workflow:
 ## Tips for Success
 
 ### 1. Start with Analysis (when needed)
-
 If you're working in unfamiliar territory, use `/start:analyze` first to understand the landscape before making changes.
 
 ### 2. Be Specific in Specifications
-
 The better your initial description in `/start:specify`, the better the resulting spec and implementation will be.
 
 ### 3. Review Before Implementing
-
 Always review the generated specification before running `/start:implement`. Make sure it matches your expectations.
 
 ### 4. Trust the Process
-
 The framework coordinates multiple specialists in parallel. Let it work its magic - don't micro-manage.
 
 ### 5. Refactor Proactively
-
 Don't wait for code to become unmaintainable. Use `/start:refactor` regularly to keep quality high.
 
 ---
@@ -284,7 +263,6 @@ You: "I need to add user authentication with JWT tokens"
 ## Remember
 
 ✅ **DO**:
-
 - Use `/start:analyze` when exploring unfamiliar code
 - Review specifications before implementing
 - Let specialists work in parallel
@@ -292,7 +270,6 @@ You: "I need to add user authentication with JWT tokens"
 - Refactor proactively
 
 ❌ **DON'T**:
-
 - Skip planning for complex features
 - Ignore the generated specifications
 - Try to micro-manage the implementation
