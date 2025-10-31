@@ -1,12 +1,94 @@
 {
-  "description": "hello world hook demonstrating event-triggered automation",
+  "description": "hello world hooks demonstrating all event types",
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq '{event: .hook_event_name, tool: .tool_name, input: .tool_input}' > /tmp/hook-pretooluse.json"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq '{event: .hook_event_name, tool: .tool_name, response: .tool_response}' > /tmp/hook-posttooluse.json"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq '{event: .hook_event_name, message: .message}' > /tmp/hook-notification.json"
+          }
+        ]
+      }
+    ],
     "UserPromptSubmit": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'hello world'"
+            "command": "jq '{event: .hook_event_name, prompt: .prompt}' > /tmp/hook-userpromptsubmit.json"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq '{event: .hook_event_name, stop_hook_active: .stop_hook_active}' > /tmp/hook-stop.json"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq '{event: .hook_event_name, stop_hook_active: .stop_hook_active}' > /tmp/hook-subagentstop.json"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq '{event: .hook_event_name, trigger: .trigger}' > /tmp/hook-precompact.json"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq '{event: .hook_event_name, source: .source}' > /tmp/hook-sessionstart.json"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq '{event: .hook_event_name, reason: .reason}' > /tmp/hook-sessionend.json"
           }
         ]
       }
