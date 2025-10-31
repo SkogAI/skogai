@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": ["mcp__skogai-memory_*"],
-    "deny": [],
-    "ask": []
-  },
-  "outputStyle": "claude-core",
-  "enableAllProjectMcpServers": false
-}
