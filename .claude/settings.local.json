@@ -1,6 +1,15 @@
 {
   "permissions": {
-    "allow": ["Bash(skogcli:*)"]
+    "allow": [
+      "Bash(skogcli:*)",
+      "Bash(./test-argc.sh:*)",
+      "Bash(chmod:*)",
+      "Bash(/tmp/quick-argc.sh deploy:*)",
+      "Bash(AWS_KEY=\"test-key-12345\" /tmp/quick-argc.sh:*)",
+      "Bash(AWS_KEY=\"test-key\" /tmp/quick-argc.sh deploy:*)",
+      "Bash(./final-test.sh:*)",
+      "mcp__plugin_episodic-memory_episodic-memory__search"
+    ]
   },
   "enabledMcpjsonServers": []
 }
