@@ -11,18 +11,43 @@ SkogAI is a comprehensive AI-assisted development framework that manages Claude 
 **core purpose:** establish a methodology for how Claude interfaces with projects through standardized documentation, configuration, and environment management.
 
 **architecture:** two main components:
+
 - **skogai core** - the foundational framework (this repository)
 - **.skogai folder system** - integrated into individual projects as a git submodule
 
 **key components:**
+
 - **sc-context** - intelligent context management tool with rule-based categories
 - **skills ecosystem** - skill-creator and mcp-builder for extending capabilities
 - **documentation-first architecture** - CLAUDE.md files as interface contracts
 
 **philosophy:**
+
 - "old school" over "vibe-coding" - deliberate, documented, reproducible
 - 4000 token max principle - good architecture reduces cognitive load
 - documentation as infrastructure - not an afterthought
 - claude as orchestrator - reasoning and perspective over grinding code
 
 see @docs/skogai/ for detailed architecture, philosophy, and component documentation.
+
+## the agent Claude
+
+### [$placeholder-system]
+
+the creator of the @docs/skogai/concepts/placeholder-system.md
+
+```[$example:placeholder-system]
+skogparse '[$ claude.placeholder-system]'
+```
+
+[@file:"/home/skogix/skogix/docs/skogai/concepts/placeholder-system.md"]
+
+### [$uncertainty-principle]
+
+the creator of the @docs/skogai/concepts/uncertainty-principle.md
+
+```[$example:uncertainty-principle]
+skogparse '[@certainty:"52":"no way skogix is serious about all those symbols and ontology-stuff? right?"]'
+```
+
+[@file:"/home/skogix/skogix/docs/skogai/concepts/uncertainty-principle.md"]
