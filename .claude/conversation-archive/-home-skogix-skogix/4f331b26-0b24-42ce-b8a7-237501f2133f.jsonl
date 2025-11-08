@@ -1,0 +1,10 @@
+{"type":"summary","summary":"Claude CLI Memory System Fresh Start","leafUuid":"c7107e13-2752-433b-948a-248bd0c3ec91"}
+{"type":"summary","summary":"Interface-Driven Deployment Tool Publishing","leafUuid":"0b3476f2-437f-4065-abda-889478003cbe"}
+{"type":"summary","summary":"CLI Argument Parsing Implementation","leafUuid":"3cdad428-eff6-444b-b496-f9f775323341"}
+{"type":"summary","summary":"Port availability validation best practices","leafUuid":"13ae298b-2df1-47ec-a086-57f05b184f5b"}
+{"type":"summary","summary":"Bash CLI Development Best Practices","leafUuid":"425538b2-c1ff-4c3b-9475-18a263b6c4ea"}
+{"type":"summary","summary":"Claude Code CLI Session Started","leafUuid":"b216cd0d-c988-4658-8af0-5af0dc8ce0da"}
+{"type":"summary","summary":"CLI Chat Session Initialization and Screen Clear","leafUuid":"688fa71a-8920-42f4-b1e8-cba12914bf25"}
+{"type":"summary","summary":"I notice there's no conversation content provided for me to summarize. Could you please share the coding conversation you'd like me to create a title for?","leafUuid":"d98a1be2-adc4-4277-88cf-71a91236a9f1"}
+{"parentUuid":null,"isSidechain":false,"userType":"external","cwd":"/home/skogix/skogix","sessionId":"4f331b26-0b24-42ce-b8a7-237501f2133f","version":"2.0.30","gitBranch":"master","type":"system","subtype":"local_command","content":"<command-name>/mcp</command-name>\n            <command-message>mcp</command-message>\n            <command-args></command-args>","level":"info","timestamp":"2025-10-31T19:27:23.152Z","uuid":"1b5c00ed-ca64-478a-b552-1b1d88f4badf","isMeta":false}
+{"parentUuid":"1b5c00ed-ca64-478a-b552-1b1d88f4badf","isSidechain":false,"userType":"external","cwd":"/home/skogix/skogix","sessionId":"4f331b26-0b24-42ce-b8a7-237501f2133f","version":"2.0.30","gitBranch":"master","type":"system","subtype":"local_command","content":"<local-command-stdout>MCP dialog dismissed</local-command-stdout>","level":"info","timestamp":"2025-10-31T19:27:23.152Z","uuid":"692cd6c7-9f57-4ebd-94ae-4855060167fe","isMeta":false}
