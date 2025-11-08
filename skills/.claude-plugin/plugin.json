@@ -1,0 +1,13 @@
+{
+  "name": "skogai",
+  "description": "skogai plugin",
+  "version": "1.0.0",
+  "author": {
+    "name": "skogix",
+    "email": "emil@skogsund.se"
+  },
+  "homepage": "https://github.com/skogai/skogai",
+  "repository": "https://github.com/skogai/skogai",
+  "license": "beer",
+  "keywords": ["skogix", "plugin", "claude", "skogai", "skills", "commands"]
+}
